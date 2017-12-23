@@ -3,14 +3,14 @@ Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
   TimeFunction:
-    Type: AWS::Serverless::TimeFunction 
+    Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
       Runtime: nodejs6.10
       CodeUri: ./
       Events:
         MyTimeApi:
-          Type: Api 
+          Type: Api
           Properties:
-            Path: /TimeResource 
+            Path: /TimeResource
             Method: GET
